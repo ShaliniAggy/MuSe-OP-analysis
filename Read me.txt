@@ -1,0 +1,13 @@
+Summary of the logic flow:
+1.	MuSe output file processing:
+•	Identified and extracted the search query and paragraphs from the MuSe output file. Query genes were the selected 3000 LncRNA genes.
+•	Empty search results were removed. 
+•	Unique Sentences Generation: For each query gene, mapped paragraphs were reduced to five words length starting from the five action keywords i.e. suppresses, interacts, activates, stimulates, and binds.
+2.	Gene Information Extraction from GC Suite:
+•	Gene CSV generation: For each Gene symbol in the GC Suite aliases, category, class and description were extracted in CSV format.
+4.	Gene Database Integration:
+•	Unique Sentences were screened for gene symbols and mapped against Gene CSV file for information about the gene symbol, category, and class. 
+5.	Data Cleanup and Filtering:
+•	The merged information was filtered and sorted to remove irrelevant information.
+6.	Exporting Results:
+•	The final dataframe, containing relevant gene information and sentences, was exported to a CSV file 
